@@ -1,0 +1,37 @@
+<div id="successMessage" style="display:none; margin-top: 30px; animation: fadeIn 2s;">
+    <h1 style="color: #ff4d6d;">Correct Answer! ❤️</h1>
+    
+    <div style="max-width: 400px; margin: 20px auto; border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-radius: 15px; overflow: hidden;">
+        <img src="photo_2026-02-01_19-26-27.jpg" alt="Us" style="width: 100%; display: block;">
+    </div>
+
+    <h2 style="font-family: 'Georgia', serif; color: #333; margin-top: 20px;">
+        "I Love you vave and I miss you so much"
+    </h2>
+    
+    <p style="font-size: 1.2rem; color: #777;">Happy 1st Anniversary!</p>
+</div>
+
+<script>
+    function moveButton() {
+        const btn = document.getElementById('noBtn');
+        const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+        btn.style.position = 'fixed';
+        btn.style.left = x + 'px';
+        btn.style.top = y + 'px';
+    }
+
+    function celebrate() {
+        // Hides the question and shows the photo/message
+        document.getElementById('love-question').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+    }
+</script>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
